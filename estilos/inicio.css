@@ -1,12 +1,9 @@
-
-
-
-.inicio{
+.inicio {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     background-image: url(../imagens/fundo\,\ alpa.png);
     background-position: center;
@@ -15,129 +12,271 @@
     height: 100%;
     padding: 2rem 0;
     color: aliceblue;
+    gap: 2rem;
+    
 }
-.texto-inicio{
+
+.texto-inicio {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
 }
-.txt-qua{
+
+.txt-qua {
     padding: 0.6rem;
     border: 2px solid aliceblue;
     border-radius: 17px;
 }
-.txt-qua h2{
+
+.txt-qua h2 {
     font-size: 0.8rem;
     text-shadow: 2px 2px 2px black;
 }
-.texto-inicio h1{
+
+.texto-inicio h1 {
     font-size: 2.5rem;
     font-family: "Google Sans", sans-serif;
 }
-.texto-inicio h1 span{
+
+.texto-inicio h1 span {
     color: rgb(60, 129, 233);
 }
-.texto-inicio p{
-    font-size: 1.3rem;
-    width: 400px;
+
+.inicio img {
+    width: 200px;
 }
-.texto-inicio a button{
-    padding: 0.8rem 1.3rem;
-    border: 2px solid rgb(60, 129, 233);
-    border-radius: 12px;
-    color: white;
-    background-color: rgb(60, 129, 233);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    cursor: pointer;
-}
-.texto-inicio a button span{
-    padding: 0.9rem;
-}
-.texto-inicio a button:hover{
-    border: 2px solid white;
-    transition: 0.3s;
-    background-color: transparent;
-}
-.card-inicio{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
-}
-.init-card-in{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.init-card-in span{
-    padding: 1rem;
-    color: rgb(60, 129, 233);
-}
-.imagens-inicio{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.imagens-inicio img{
-    width: 500px;
-}
-.txt-card-in h1{
-    font-size: 0.8rem;
-}
-@media (max-width:600px){
-    .texto-inicio{
+
+@media (max-width:750px) {
+    .inicio {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
-    .imagens-inicio img{
-        width: 80%;
-    }
-}
-@media (max-width:450px){
-    .txt-qua h2{
-        font-size: 0.6rem;
-    }
-    .texto-inicio h1{
-        font-size: 1.5rem;
-    }
-    .texto-inicio p{
-        font-size: 1rem;
-        width: 90%;
-    }
-    .card-inicio{
+
+    .texto-inicio {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    }
-    .card-inicio h1{
-        font-size: 1rem;
+        text-align: center;
     }
 }
-@media (max-width:320px){
-    .txt-qua{
+
+@media (max-width:600px) {
+    .texto-inicio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .inicio img {
+        width: 60%;
+    }
+}
+
+@media (max-width:450px) {
+    .txt-qua h2 {
+        font-size: 0.6rem;
+    }
+
+    .texto-inicio h1 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:320px) {
+    .txt-qua {
         padding: 0.5rem;
         border: 1.4px solid aliceblue;
     }
-    .txt-qua h2{
+
+    .txt-qua h2 {
         font-size: 0.5rem;
     }
-    .texto-inicio h1{
+
+    .texto-inicio h1 {
         font-size: 1.2rem;
     }
-    .texto-inicio p{
-        font-size: 0.9rem;
+}
+.itens {
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+}
+
+.area-busca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    height: 65px;
+    border: 2px solid rgb(60, 129, 233);
+    border-radius: 40px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 15px rgba(60, 129, 233, 0.12);
+}
+
+.buscador input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0 25px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background: transparent;
+}
+
+.buscador button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 100%;
+    border: none;
+    background: rgb(60, 129, 233);
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buscador button:hover {
+    background: rgb(35, 100, 200);
+}
+
+.texto-busca {
+    max-width: 700px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* 800px */
+@media (max-width: 800px) {
+    .buscador {
+        height: 58px;
     }
-    .card-inicio h1{
-        font-size: 0.7rem;
+
+    .texto-busca {
+        font-size: 16px;
+    }
+}
+
+/* 600px */
+@media (max-width: 600px) {
+    .itens {
+        padding: 2rem 1rem;
+    }
+
+    .buscador {
+        height: 52px;
+    }
+
+    .buscador input {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+    .buscador button {
+        width: 60px;
+        font-size: 20px;
+    }
+}
+
+/* 400px */
+@media (max-width: 400px) {
+    .buscador {
+        height: 48px;
+    }
+
+    .buscador input {
+        font-size: 13px;
+        padding: 0 12px;
+    }
+
+    .buscador button {
+        width: 50px;
+    }
+
+    .texto-busca {
+        font-size: 14px;
+    }
+}
+
+/* 300px */
+@media (max-width: 300px) {
+    .buscador {
+        height: 42px;
+    }
+
+    .buscador input {
+        font-size: 11px;
+        padding: 0 8px;
+    }
+
+    .buscador button {
+        width: 42px;
+        font-size: 17px;
+    }
+}
+
+/* 200px */
+@media (max-width: 200px) {
+    .buscador {
+        height: 36px;
+    }
+
+    .buscador input {
+        font-size: 9px;
+        padding: 0 5px;
+    }
+
+    .buscador button {
+        width: 32px;
+        font-size: 14px;
+    }
+
+    .texto-busca {
+        font-size: 11px;
+    }
+}
+
+/* 150px */
+@media (max-width: 150px) {
+    .itens {
+        padding: 1rem 0.3rem;
+    }
+
+    .buscador {
+        height: 32px;
+    }
+
+    .buscador input {
+        font-size: 8px;
+        padding: 0 3px;
+    }
+
+    .buscador button {
+        width: 26px;
+        font-size: 11px;
+    }
+
+    .texto-busca {
+        font-size: 9px;
     }
 }
